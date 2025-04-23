@@ -1,0 +1,47 @@
+/* SpecialOffers.css */
+.offers-section {
+  background-color: var(--secondary-color);
+}
+
+.offer-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border: none;
+  height: 100%;
+}
+
+.offer-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.offer-content {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.offer-price {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.price del {
+  font-size: 1rem;
+  color: #888;
+  margin-right: 10px;
+}

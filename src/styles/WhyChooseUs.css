@@ -1,0 +1,20 @@
+/* WhyChooseUs.css */
+.why-us-item {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.why-us-item:hover {
+  transform: translateY(-10px);
+}
+
+.why-us-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}

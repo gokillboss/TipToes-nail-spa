@@ -1,0 +1,38 @@
+/* PriceTable.css */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.price-table thead {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.price-table th, 
+.price-table td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+
+.price-table tr:hover {
+  background-color: var(--light-gray);
+}
+
+.price {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.price-desc {
+  max-width: 600px;
+}

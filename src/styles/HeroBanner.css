@@ -1,0 +1,40 @@
+/* HeroBanner.css */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('https://via.placeholder.com/1920x1080');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin-top: 76px;
+  position: relative;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  color: var(--white);
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}

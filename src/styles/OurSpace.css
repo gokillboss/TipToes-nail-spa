@@ -1,0 +1,26 @@
+.space-section {
+  background-color: var(--light-gray);
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 300px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.05);
+}

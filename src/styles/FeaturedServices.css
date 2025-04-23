@@ -1,0 +1,32 @@
+.featured-services {
+  padding: 100px 0;
+}
+
+.service-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.service-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.service-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
