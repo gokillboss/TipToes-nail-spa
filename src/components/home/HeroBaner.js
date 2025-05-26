@@ -13,7 +13,9 @@ const HeroBanner = () => {
       <Container>
         <Row>
           <Col md={6} className="hero-content">
-            <h1>Nurturing the Beauty of Your Hands</h1>
+            <h1>Where Beauty Meets Self-love </h1>
+            {/* <h1>Or </h1>
+            <h1>Polish Your Nail, Nourish Your Soul </h1> */}
             <p>
               Experience premium nail care services with a relaxing atmosphere and 
               highly skilled technicians at Tip Toes.

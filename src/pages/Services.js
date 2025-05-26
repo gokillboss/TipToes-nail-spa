@@ -1,135 +1,420 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 import PageHeader from '../components/layout/PageHeader';
 import ServiceCategory from '../components/services/ServiceCategory';
 import BookBanner from '../components/common/BookBanner';
-//import '../styles/Services.css';
+import '../styles/Services.css';
 
-const Services = () => {
+const ServicesPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
     { id: 'all', name: 'All' },
-    { id: 'manicure', name: 'Manicure Services' },
-    { id: 'pedicure', name: 'Pedicure Services' },
-    { id: 'skincare', name: 'Hand & Foot Skincare' },
-    { id: 'special', name: 'Special Services' }
+    { id: 'manicure', name: 'Manicures' },
+    { id: 'pedicure', name: 'Pedicures' },
+    { id: 'specialty', name: 'Specialty Nails' },
+    { id: 'addons', name: 'Nail Add-Ons' },
+    { id: 'waxing', name: 'Waxing Services' },
+    { id: 'eyelash', name: 'Eyelash Extensions' }
   ];
 
   const manicureServices = [
     {
       id: 1,
-      title: 'Basic Manicure',
-      duration: '30-45 minutes',
-      description: 'Basic nail care service including soaking, nail trimming, filing, cuticle care, hand conditioning, and regular polish.',
+      title: 'Spa Manicure',
+      duration: '30-40 minutes',
+      description: 'Classic manicure including nail shaping, cuticle care, hand massage, and polish application with premium products.',
       features: [
-        'Relaxing essential oil soak',
-        'Customized nail shaping',
-        'Premium safe polishes'
+        'Relaxing hand soak',
+        'Expert nail shaping',
+        'Cuticle treatment',
+        'Moisturizing hand massage'
       ],
-      price: '$25',
-      image: 'https://via.placeholder.com/600x500'
+      price: '$30',
+      image: 'spa-manicure.jpg'
     },
     {
       id: 2,
-      title: 'Premium Gel Polish',
-      duration: '60 minutes',
-      description: 'Premium gel polish service provides a glossy, durable finish lasting 2-3 weeks. Includes basic nail care and gel application with trendy colors.',
+      title: 'Gel Manicure',
+      duration: '45-60 minutes',
+      description: 'Long-lasting gel polish application that stays chip-free for up to 2-3 weeks with a high-gloss finish.',
       features: [
-        'Premium safe gel polishes',
-        'Color that lasts without chipping',
-        'Quick dry with UV/LED lamp'
-      ],
-      price: '$35',
-      image: 'https://via.placeholder.com/600x500'
-    },
-    {
-      id: 3,
-      title: 'Acrylic/Powder Dip',
-      duration: '90-120 minutes',
-      description: 'Acrylic/powder service creates perfectly shaped nails, extending natural nails and adding strength. Durable finish lasts 3-4 weeks.',
-      features: [
-        'Custom nail shaping',
-        'Premium acrylic materials',
-        'Strong, beautiful nails'
+        'Spa manicure included',
+        'Premium gel polish',
+        'LED curing',
+        'Extended wear time'
       ],
       price: '$45',
-      image: 'https://via.placeholder.com/600x500'
+      image: 'gel-manicure.jpg'
     }
   ];
 
   const pedicureServices = [
     {
-      id: 4,
-      title: 'Basic Pedicure',
-      duration: '45-60 minutes',
-      description: 'Comprehensive foot care including relaxing soak, nail trimming, filing, cuticle care, callus removal, light foot massage, and polish.',
+      id: 3,
+      title: 'Spa Pedicure',
+      duration: '45-50 minutes',
+      description: 'Classic pedicure with foot soak, nail care, callus removal, and polish application for beautifully groomed feet.',
       features: [
-        'Mineral salt relaxing foot soak',
-        'Gentle foot massage',
-        'Exfoliation and moisturizing'
+        'Therapeutic foot soak',
+        'Nail shaping and care',
+        'Callus treatment',
+        'Foot massage'
       ],
-      price: '$28',
-      image: 'https://via.placeholder.com/600x500'
+      price: '$40',
+      image: 'spa-pedicure.jpg'
+    },
+    {
+      id: 4,
+      title: 'Gel Pedicure',
+      duration: '60-70 minutes',
+      description: 'Complete pedicure service with long-lasting gel polish application for gorgeous toes.',
+      features: [
+        'Spa pedicure included',
+        'Durable gel polish',
+        'Extended wear time',
+        'High-shine finish'
+      ],
+      price: '$55',
+      image: 'gel-pedicure.jpg'
     },
     {
       id: 5,
-      title: 'Spa Pedicure',
+      title: 'Deluxe Spa Pedicure',
       duration: '75-90 minutes',
-      description: 'Upgrade your foot care experience with our premium Spa Pedicure. Includes all basic pedicure steps plus a moisture mask, extended massage, and premium skin products.',
+      description: 'Premium pedicure experience with extended massage, exfoliation, and hydrating mask treatment.',
       features: [
-        'Herbal and essential oil soak',
-        'Deep moisture mask treatment',
-        'Extended foot/calf massage (15 min)'
+        'Enhanced foot treatment',
+        'Extended massage',
+        'Exfoliating scrub',
+        'Deep moisturizing'
       ],
-      price: '$38',
-      image: 'https://via.placeholder.com/600x500'
+      price: '$65',
+      image: 'deluxe-pedicure.jpg'
+    },
+    {
+      id: 6,
+      title: 'Golden Spa Pedicure',
+      duration: '90-110 minutes',
+      description: 'The ultimate luxury pedicure featuring premium products and extended treatments for total foot renewal.',
+      features: [
+        'Premium foot care',
+        'Luxurious products',
+        'Extended massage therapy',
+        'Complete relaxation'
+      ],
+      price: '$85',
+      image: 'golden-pedicure.jpg'
     }
   ];
 
-  const specialServices = [
-    {
-      id: 6,
-      title: 'Nail Art',
-      duration: '60-120 minutes (depending on complexity)',
-      description: 'Artistic nail designs that transform your nails into miniature works of art. From simple patterns to complex designs, our technicians will bring your vision to life.',
-      features: [
-        'Custom designs on request',
-        'Advanced art techniques',
-        'Optional crystals and embellishments'
-      ],
-      price: '$15 - $50',
-      image: 'https://via.placeholder.com/600x500'
-    },
+  const specialtyNails = [
     {
       id: 7,
-      title: 'Paraffin Spa Treatment',
-      duration: '30 minutes (can be combined with other services)',
-      description: 'Paraffin wax therapy softens skin, provides deep moisture, and improves circulation. Especially effective for dry, cracked skin and provides wonderful relaxation.',
+      title: 'Acrylic Full Set',
+      duration: '60-90 minutes',
+      description: 'Professional acrylic nail application for strong, beautiful nails with your choice of shape and length.',
       features: [
-        'Softens dry, cracked skin',
-        'Provides deep moisture',
-        'Improves blood circulation'
+        'Customized length and shape',
+        'Durable application',
+        'Professional finish',
+        'Long-lasting results'
+      ],
+      price: '$55+',
+      image: 'acrylic-fullset.jpg'
+    },
+    {
+      id: 8,
+      title: 'Acrylic Refill',
+      duration: '45-60 minutes',
+      description: 'Maintenance service for existing acrylic nails to keep them looking fresh and beautiful.',
+      features: [
+        'Fill new growth area',
+        'Shape adjustment if needed',
+        'Polish change option',
+        'Extends life of your acrylics'
+      ],
+      price: '$45',
+      image: 'acrylic-refill.jpg'
+    },
+    {
+      id: 9,
+      title: 'Acrylic Full Set with Gel',
+      duration: '90-120 minutes',
+      description: 'Complete acrylic application with gel polish topcoat for extra durability and shine.',
+      features: [
+        'Strength of acrylics',
+        'Shine of gel polish',
+        'Custom shapes',
+        'Long-lasting wear'
+      ],
+      price: '$65',
+      image: 'acrylic-gel.jpg'
+    },
+    {
+      id: 10,
+      title: 'Dip Powder',
+      duration: '60-75 minutes',
+      description: 'Dipping powder system that creates strong, lightweight, natural-looking nails without harsh chemicals.',
+      features: [
+        'Odor-free application',
+        'No UV light needed',
+        'Durable finish',
+        'Gentle on natural nails'
+      ],
+      price: '$50',
+      image: 'dip-powder.jpg'
+    },
+    {
+      id: 11,
+      title: 'T.A.P. Hybrid Gel Set',
+      duration: '60-75 minutes',
+      description: 'Advanced hybrid gel system that combines the best properties of hard gel and soft gel for optimal results.',
+      features: [
+        'Flexible yet durable',
+        'Natural looking',
+        'Lightweight feel',
+        'Professional finish'
+      ],
+      price: '$60',
+      image: 'hybrid-gel.jpg'
+    },
+    {
+      id: 12,
+      title: 'Hard Builder Gel Set',
+      duration: '75-90 minutes',
+      description: 'Professional builder gel application for stronger, more durable nail extensions or overlays.',
+      features: [
+        'Stronger than regular gel',
+        'Custom shapes available',
+        'Perfect for extensions',
+        'Resistant to chipping'
+      ],
+      price: '$60',
+      image: 'builder-gel.jpg'
+    },
+    {
+      id: 13,
+      title: 'Gel X Full Set',
+      duration: '60-75 minutes',
+      description: 'Pre-shaped full-coverage gel nail extensions for an instantly perfect manicure.',
+      features: [
+        'Lightweight extensions',
+        'Natural-looking results',
+        'Quick application',
+        'Various shapes available'
+      ],
+      price: '$60',
+      image: 'gelx-set.jpg'
+    }
+  ];
+
+  const addOnsServices = [
+    {
+      id: 14,
+      title: 'Ombre Nails',
+      duration: '15-20 minutes add-on',
+      description: 'Beautiful gradient color effect applied to your nails for a trendy, eye-catching look.',
+      features: [
+        'Seamless color transition',
+        'Custom color combinations',
+        'Professional application',
+        'Modern nail trend'
+      ],
+      price: '$15',
+      image: 'ombre-nails.jpg'
+    },
+    {
+      id: 15,
+      title: 'Chrome/Cateye Effect',
+      duration: '10-15 minutes add-on',
+      description: 'Specialty finishes that create metallic shine or magnetic patterns on your nails.',
+      features: [
+        'High-shine metallic finish',
+        'Unique visual effects',
+        'Professional application',
+        'Eye-catching results'
+      ],
+      price: '$15',
+      image: 'chrome-cateye.jpg'
+    },
+    {
+      id: 16,
+      title: 'French Tips',
+      duration: '10-15 minutes add-on',
+      description: 'Classic white-tipped finish that creates a timeless, elegant look for your manicure or pedicure.',
+      features: [
+        'Clean, precise lines',
+        'Timeless elegant style',
+        'Professional application',
+        'Natural-looking option'
+      ],
+      price: '$10',
+      image: 'french-tips.jpg'
+    },
+    {
+      id: 17,
+      title: 'Nail Art Design',
+      duration: 'Varies by complexity',
+      description: 'Custom nail art from simple accents to elaborate designs to express your personal style.',
+      features: [
+        'Customized designs',
+        'Skilled application',
+        'Express your style',
+        'Variety of options'
+      ],
+      price: '$5+',
+      image: 'nail-design.jpg'
+    },
+    {
+      id: 18,
+      title: 'Polish Change',
+      duration: '15-20 minutes',
+      description: 'Quick service to update your nail color with premium regular polish.',
+      features: [
+        'Quick service',
+        'Wide color selection',
+        'Professional application',
+        'Fresh new look'
+      ],
+      price: '$15',
+      image: 'polish-change.jpg'
+    },
+    {
+      id: 19,
+      title: 'Gel Polish Change',
+      duration: '25-30 minutes',
+      description: 'Remove existing gel polish and apply a fresh gel color for extended wear.',
+      features: [
+        'Professional removal',
+        'Fresh gel application',
+        'High-shine finish',
+        'Long-lasting results'
+      ],
+      price: '$30',
+      image: 'gel-change.jpg'
+    },
+    {
+      id: 20,
+      title: 'Acrylic Removal',
+      duration: '30-40 minutes',
+      description: 'Professional, gentle removal of acrylic nails with conditioning treatment for natural nails.',
+      features: [
+        'Safe removal process',
+        'Minimal natural nail damage',
+        'Conditioning treatment',
+        'Nail health protection'
       ],
       price: '$20',
-      image: 'https://via.placeholder.com/600x500'
-    }
+      image: 'acrylic-removal.jpg'
+    },
+    // {
+    //   id: 21,
+    //   title: 'Callous Removal',
+    //   duration: '15-20 minutes add-on',
+    //   description: 'Targeted treatment to safely remove callouses and rough skin from feet.',
+    //   features: [
+    //     'Professional technique',
+    //     'Gentle yet effective',
+    //     'Smoother, softer feet',
+    //     'Enhanced comfort'
+    //   ],
+    //   price: '$15',
+    //   image: 'callous-removal.jpg'
+    // }
+  ];
+
+  const waxingServices = [
+    {
+      id: 22,
+      title: 'Eyebrow Waxing',
+      duration: '15-20 minutes',
+      description: 'Precise eyebrow shaping using premium wax for clean, defined brows.',
+      features: [
+        'Professional technique',
+        'Clean brow definition',
+        'Face-framing results',
+        'Enhanced expression'
+      ],
+      price: '$20',
+      image: 'eyebrow-wax.jpg'
+    },
+    {
+      id: 23,
+      title: 'Facial Waxing',
+      duration: 'Varies by area',
+      description: 'Hair removal for various facial areas including upper lip, chin, and full face options.',
+      features: [
+        'Gentle formulation',
+        'Quick results',
+        'Smoother skin',
+        'Professional application'
+      ],
+      price: '$10 - $50+',
+      image: 'facial-wax.jpg'
+    },
+    // {
+    //   id: 24,
+    //   title: 'Body Waxing',
+    //   duration: 'Varies by area',
+    //   description: 'Professional hair removal services for various body areas, including arms, legs, and underarms.',
+    //   features: [
+    //     'Thorough hair removal',
+    //     'Longer-lasting results',
+    //     'Professional technique',
+    //     'Smoother skin'
+    //   ],
+    //   price: '$30 - $80',
+    //   image: 'body-wax.jpg'
+    // }
+  ];
+
+  const eyelashServices = [
+    {
+      id: 25,
+      title: 'Eyelash Extensions - New Set',
+      duration: '90-120 minutes',
+      description: 'Full set of premium eyelash extensions individually applied for a natural or dramatic look.',
+      features: [
+        'Customized length and volume',
+        'Lightweight comfort',
+        'Natural or dramatic options',
+        'Professional application'
+      ],
+      price: '$185+',
+      image: 'lash-extensions.jpg'
+    },
+    // {
+    //   id: 26,
+    //   title: 'Eyelash Extensions - Fill',
+    //   duration: '60-75 minutes',
+    //   description: 'Maintenance service to fill in grown-out lash extensions and maintain your perfect look.',
+    //   features: [
+    //     'Extends wear of full set',
+    //     'Refresh your look',
+    //     'Fill gaps from natural lash shedding',
+    //     'Professional maintenance'
+    //   ],
+    //   price: '$90+',
+    //   image: 'lash-fill.jpg'
+    // }
   ];
 
   return (
     <div className="services-page">
       <PageHeader 
         title="Our Services" 
-        description="Experience premium and professional nail care services at Luxe Nails"
+        description="Experience premium and professional nail care services at Tiptoe Nail Spa"
       />
-      
+
       <Container>
-        <div className="service-categories">
+        <div className="service-categories mb-4 text-center">
           {categories.map(category => (
             <Button 
               key={category.id}
-              className={`category-btn ${activeCategory === category.id ? 'active' : ''}`}
+              className={`category-btn mx-2 ${activeCategory === category.id ? 'active' : ''}`}
               onClick={() => setActiveCategory(category.id)}
+              variant="outline-dark"
             >
               {category.name}
             </Button>
@@ -140,24 +425,22 @@ const Services = () => {
       <section className="section">
         <Container>
           {(activeCategory === 'all' || activeCategory === 'manicure') && (
-            <ServiceCategory 
-              title="Manicure Services" 
-              services={manicureServices} 
-            />
+            <ServiceCategory title="Manicures" services={manicureServices} />
           )}
-          
           {(activeCategory === 'all' || activeCategory === 'pedicure') && (
-            <ServiceCategory 
-              title="Pedicure Services" 
-              services={pedicureServices} 
-            />
+            <ServiceCategory title="Pedicures" services={pedicureServices} />
           )}
-          
-          {(activeCategory === 'all' || activeCategory === 'special') && (
-            <ServiceCategory 
-              title="Special Services" 
-              services={specialServices} 
-            />
+          {(activeCategory === 'all' || activeCategory === 'specialty') && (
+            <ServiceCategory title="Specialty Nails" services={specialtyNails} />
+          )}
+          {(activeCategory === 'all' || activeCategory === 'addons') && (
+            <ServiceCategory title="Nail Add-Ons" services={addOnsServices} />
+          )}
+          {(activeCategory === 'all' || activeCategory === 'waxing') && (
+            <ServiceCategory title="Waxing Services" services={waxingServices} />
+          )}
+          {(activeCategory === 'all' || activeCategory === 'eyelash') && (
+            <ServiceCategory title="Eyelash Extensions" services={eyelashServices} />
           )}
         </Container>
       </section>
@@ -167,4 +450,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServicesPage;

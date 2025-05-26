@@ -1,0 +1,4 @@
+;/*FB_PKG_DELIM*/
+
+__d("FDSActorMenu.react",["FDSMenu.react","react","react-compiler-runtime"],(function(a,b,c,d,e,f,g){"use strict";var h,i=h||d("react");function a(a){var b=d("react-compiler-runtime").c(9),e,f,g;b[0]!==a?(f=a.children,g=a.onClose,e=babelHelpers.objectWithoutPropertiesLoose(a,["children","onClose"]),b[0]=a,b[1]=e,b[2]=f,b[3]=g):(e=b[1],f=b[2],g=b[3]);if(f==null)return null;b[4]===Symbol["for"]("react.memo_cache_sentinel")?(a={className:"x1emribx x1i64zmx"},b[4]=a):a=b[4];b[5]!==e||b[6]!==f||b[7]!==g?(a=i.jsx("div",babelHelpers["extends"]({},a,{children:i.jsx(c("FDSMenu.react"),babelHelpers["extends"]({},e,{onClose:g,size:"full",truncate:!0,children:f}))})),b[5]=e,b[6]=f,b[7]=g,b[8]=a):a=b[8];return a}g["default"]=a}),98);
+__d("FDSClockFilled16PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("478793"),16);b=a;g["default"]=b}),98);

@@ -5,12 +5,15 @@ import '../../styles/ServiceCard.css';
 
 const ServiceCard = ({ service }) => {
   const { title, duration, description, features, price, image } = service;
-  
+
+  // Nếu image là tên file (ví dụ: 'manicure.png'), load từ assets
+  const imageSrc = require(`../../assets/services/${image}`);
+
   return (
     <li className="service-item">
       <Row>
         <Col md={4}>
-          <img src={image} alt={title} className="service-img" />
+          <img src={imageSrc} alt={title} className="service-img" />
         </Col>
         <Col md={8}>
           <div className="service-info">
