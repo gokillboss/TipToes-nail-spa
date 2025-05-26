@@ -1,0 +1,16 @@
+;/*FB_PKG_DELIM*/
+
+__d("FDSArrowDiagonalRightUpFilled16Icon",["cr:14398"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:14398")}),98);
+__d("FDSArrowDiagonalRightUpFilled16PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("620418"),16);b=a;g["default"]=b}),98);
+__d("FDSCalendarFilled24Icon",["cr:13823"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:13823")}),98);
+__d("FDSCalendarFilled24PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("481121"),24);b=a;g["default"]=b}),98);
+__d("FDSCautionCircleFilled24Icon",["cr:13967"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:13967")}),98);
+__d("FDSCautionCircleFilled24PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("681772"),24);b=a;g["default"]=b}),98);
+__d("FDSCheckmarkCircleFilled24Icon",["cr:13826"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:13826")}),98);
+__d("FDSCheckmarkCircleFilled24PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("498147"),24);b=a;g["default"]=b}),98);
+__d("FDSClockFilled24Icon",["cr:13828"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:13828")}),98);
+__d("FDSClockFilled24PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("478797"),24);b=a;g["default"]=b}),98);
+__d("FDSFundraiserFilled24Icon",["cr:14117"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:14117")}),98);
+__d("FDSFundraiserFilled24PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("510955"),24);b=a;g["default"]=b}),98);
+__d("FDSInfoCircleFilled24Icon",["cr:13840"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:13840")}),98);
+__d("FDSInfoCircleFilled24PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("479178"),24);b=a;g["default"]=b}),98);

@@ -5,8 +5,8 @@ import OurSpace from '../components/home/OurSpace';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import SpecialOffers from '../components/home/SpecialOffers';
 import BookAppointment from '../components/home/BookAppointment';
-import Testimonials from '../components/home/Testimonials';
-//import '../styles/Home.css';
+//import Testimonials from '../components/home/Testimonials';
+import '../styles/Home.css';
 
 const Home = () => {
   return (
@@ -17,7 +17,7 @@ const Home = () => {
       <WhyChooseUs />
       <SpecialOffers />
       <BookAppointment />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </div>
   );
 };

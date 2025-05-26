@@ -1,0 +1,7 @@
+;/*FB_PKG_DELIM*/
+
+__d("FDSCamcorderLiveFilled20Icon",["cr:14203"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:14203")}),98);
+__d("FDSCamcorderLiveFilled20PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("480530"),20);b=a;g["default"]=b}),98);
+__d("FDSClockFilled16Icon",["cr:13868"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:13868")}),98);
+__d("FDSLineChartFilled20Icon",["cr:14226"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=b("cr:14226")}),98);
+__d("FDSLineChartFilled20PNGIcon.react",["ix","fbicon"],(function(a,b,c,d,e,f,g,h){"use strict";a=d("fbicon")._(h("487670"),20);b=a;g["default"]=b}),98);

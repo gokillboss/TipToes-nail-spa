@@ -1,10 +1,26 @@
 import React, { useState } from 'react';
-import { Container, Button, Row } from 'react-bootstrap';
+import { Container, Button, Row, ButtonGroup } from 'react-bootstrap';
 import PageHeader from '../components/layout/PageHeader';
 import GalleryItem from '../components/gallery/GalleryItem';
 import InstagramSection from '../components/gallery/InstagramSection';
 import GalleryModal from '../components/gallery/GalleryModal';
 import BookBanner from '../components/common/BookBanner';
+import '../styles/Gallery.css';
+
+// Import nail design images
+import pastelDaisiesImg from '../assets/gallery/pastel-daisies-nail-art.jpg';
+import whiteEleganceImg from '../assets/gallery/white-elegance-bridal-nails.jpg';
+import sparklingGoldImg from '../assets/gallery/sparkling-gold-party-nails.jpg';
+import elegantNudeImg from '../assets/gallery/elegant-nude-everyday-nails.jpg';
+import pastelOmbreImg from '../assets/gallery/pastel-ombre-gel-nails.jpg';
+import marbleEffectImg from '../assets/gallery/marble-effect-acrylic-nails.jpg';
+import galaxyDreamsImg from '../assets/gallery/galaxy-dreams-nail-art.jpg';
+import delicateLaceImg from '../assets/gallery/delicate-lace-bridal-nails.jpg';
+import goldSequinImg from '../assets/gallery/gold-sequin-party-nails.jpg';
+import minimalistStripesImg from '../assets/gallery/minimalist-stripes-everyday-nails.jpg';
+import frenchTipsImg from '../assets/gallery/modern-french-tips-gel-nails.jpg';
+import coffinOmbreImg from '../assets/gallery/coffin-ombre-acrylic-nails.jpg';
+
 //import '../styles/Gallery.css';
 
 const Gallery = () => {
@@ -28,7 +44,7 @@ const Gallery = () => {
       title: 'Pastel Daisies',
       category: 'art',
       categoryName: 'Nail Art',
-      image: 'https://via.placeholder.com/600x600',
+      image: pastelDaisiesImg,
       description: 'Delicate daisy design on a soft pastel background. Perfect for spring or summer.'
     },
     {
@@ -36,7 +52,7 @@ const Gallery = () => {
       title: 'Pure White Elegance',
       category: 'bridal',
       categoryName: 'Bridal Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: whiteEleganceImg,
       description: 'Classic white design with subtle shimmer for a timeless bridal look.'
     },
     {
@@ -44,7 +60,7 @@ const Gallery = () => {
       title: 'Sparkling Gold',
       category: 'party',
       categoryName: 'Party Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: sparklingGoldImg,
       description: 'Glittering gold accents for a glamorous party-ready statement.'
     },
     {
@@ -52,7 +68,7 @@ const Gallery = () => {
       title: 'Elegant Nude',
       category: 'everyday',
       categoryName: 'Everyday Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: elegantNudeImg,
       description: 'Sophisticated nude shade that complements any outfit or occasion.'
     },
     {
@@ -60,7 +76,7 @@ const Gallery = () => {
       title: 'Pastel Ombre',
       category: 'gel',
       categoryName: 'Gel Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: pastelOmbreImg,
       description: 'Smooth gradient effect with long-lasting gel polish in soft pastel shades.'
     },
     {
@@ -68,7 +84,7 @@ const Gallery = () => {
       title: 'Marble Effect',
       category: 'acrylic',
       categoryName: 'Acrylic/Powder Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: marbleEffectImg,
       description: 'Sophisticated marble pattern on durable acrylic base for a luxury feel.'
     },
     {
@@ -76,7 +92,7 @@ const Gallery = () => {
       title: 'Galaxy Dreams',
       category: 'art',
       categoryName: 'Nail Art',
-      image: 'https://via.placeholder.com/600x600',
+      image: galaxyDreamsImg,
       description: 'Cosmic-inspired design with swirls of colors resembling a starry night sky.'
     },
     {
@@ -84,7 +100,7 @@ const Gallery = () => {
       title: 'Delicate Lace',
       category: 'bridal',
       categoryName: 'Bridal Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: delicateLaceImg,
       description: 'Intricate lace pattern perfect for wedding day elegance.'
     },
     {
@@ -92,7 +108,7 @@ const Gallery = () => {
       title: 'Gold Sequin',
       category: 'party',
       categoryName: 'Party Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: goldSequinImg,
       description: 'Eye-catching gold sequin design ideal for special occasions.'
     },
     {
@@ -100,7 +116,7 @@ const Gallery = () => {
       title: 'Minimalist Stripes',
       category: 'everyday',
       categoryName: 'Everyday Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: minimalistStripesImg,
       description: 'Clean, minimalist stripes for a modern everyday look.'
     },
     {
@@ -108,7 +124,7 @@ const Gallery = () => {
       title: 'Modern French Tips',
       category: 'gel',
       categoryName: 'Gel Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: frenchTipsImg,
       description: 'Contemporary twist on the classic French manicure with gel polish.'
     },
     {
@@ -116,7 +132,7 @@ const Gallery = () => {
       title: 'Coffin Ombre',
       category: 'acrylic',
       categoryName: 'Acrylic/Powder Nails',
-      image: 'https://via.placeholder.com/600x600',
+      image: coffinOmbreImg,
       description: 'Stylish coffin shape with gradient color effect on acrylic base.'
     }
   ];
@@ -134,26 +150,27 @@ const Gallery = () => {
     <div className="gallery-page">
       <PageHeader 
         title="Nail Design Gallery" 
-        description="Explore our artistic nail designs and beautiful creations at Luxe Nails"
+        description="Explore our artistic nail designs and beautiful creations at Tip Toes"
       />
       
-      <Container>
-        <div className="gallery-categories">
+      <Container className="my-5">
+        <ButtonGroup className="d-flex flex-wrap justify-content-center mb-5">
           {categories.map(category => (
             <Button 
               key={category.id}
-              className={`category-btn ${activeCategory === category.id ? 'active' : ''}`}
+              variant={activeCategory === category.id ? "primary" : "outline-primary"}
+              className="m-2 rounded-pill"
               onClick={() => setActiveCategory(category.id)}
             >
               {category.name}
             </Button>
           ))}
-        </div>
+        </ButtonGroup>
       </Container>
 
       <section className="section">
         <Container>
-          <Row className="gallery-grid">
+          <Row className="g-4">
             {filteredItems.map(item => (
               <GalleryItem 
                 key={item.id} 
@@ -163,8 +180,8 @@ const Gallery = () => {
             ))}
           </Row>
 
-          <div className="load-more">
-            <Button className="btn btn-outline">Load More</Button>
+          <div className="text-center mt-5">
+            <Button variant="outline-primary" className="px-4 py-2">Load More</Button>
           </div>
         </Container>
       </section>
