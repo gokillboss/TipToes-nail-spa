@@ -1,70 +1,147 @@
-# Getting Started with Create React App
+Tip Toes Nail Salon Website
+A modern, responsive website for Tip Toes nail salon built with React and Bootstrap. This website showcases premium nail care services, gallery of work, pricing information, and provides an elegant online presence for the salon.
+🌟 Features
+🏠 Homepage
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hero Banner with compelling call-to-action
+Featured Services showcase
+Our Space gallery section
+Why Choose Us highlights
+Special Offers and promotions
+Book Appointment section
 
-## Available Scripts
+💅 Services
 
-In the project directory, you can run:
+Comprehensive Service Listings organized by categories:
 
-### `yarn start`
+Manicures (Spa, Gel)
+Pedicures (Spa, Gel, Deluxe, Golden)
+Specialty Nails (Acrylic, Dip Powder, Builder Gel, Gel X)
+Nail Add-Ons (Ombre, Chrome, French Tips, Nail Art)
+Waxing Services
+Eyelash Extensions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Detailed Service Information with duration, features, and pricing
+Category Filtering for easy navigation
 
-### `yarn test`
+💰 Pricing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Detailed Price Tables for all services
+Package Deals with special pricing
+Service Categories for organized viewing
+Pricing Notes with important information
+Responsive Tables for mobile viewing
 
-### `yarn build`
+🎨 Gallery
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Beautiful Nail Design Showcase with categories:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Bridal Nails
+Party Nails
+Nail Art
+Everyday Nails
+Gel Nails
+Acrylic/Powder Nails
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+Filter by Category functionality
+Modal View for detailed design viewing
+Instagram Integration section
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👥 About Us
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Our Story and salon history
+Our Values showcase
+Our Space detailed information
+Professional Team presentation (ready for team photos)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📞 Contact
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contact Form with validation
+Contact Information cards
+Working Hours display
+Location Map integration
+FAQ Section for common questions
 
-## Learn More
+📱 Additional Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Fully Responsive Design for all devices
+Modern UI/UX with smooth animations
+SEO Optimized structure
+Accessibility Compliant
+Fast Loading optimized images and code
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+🛠️ Tech Stack
+Frontend
 
-### Code Splitting
+React 18 - Modern JavaScript library for building user interfaces
+React Router - Client-side routing for single-page application
+React Bootstrap - Bootstrap components for React
+FontAwesome - Icon library for enhanced UI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Styling
 
-### Analyzing the Bundle Size
+CSS3 with custom styling
+Bootstrap 5 - Responsive CSS framework
+Google Fonts - Montserrat and Playfair Display
+CSS Variables - Consistent color scheme and theming
+Responsive Design - Mobile-first approach
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Development Tools
 
-### Making a Progressive Web App
+Create React App - React application boilerplate
+ES6+ - Modern JavaScript features
+JSX - JavaScript XML syntax
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+📋 Prerequisites
+Before running this application, make sure you have:
 
-### Advanced Configuration
+Node.js (v14 or higher)
+npm or yarn package manager
+Modern web browser (Chrome, Firefox, Safari, Edge)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+🚀 Installation & Setup
+1. Clone the Repository
+bashgit clone <repository-url>
+cd tip-toes-nail-salon
+2. Install Dependencies
+bashnpm install
+# or
+yarn install
+3. Start Development Server
+bashnpm start
+# or
+yarn start
+The application will be available at http://localhost:3000
+4. Build for Production
+bashnpm run build
+# or
+yarn build
+📁 Project Structure
+src/
+├── components/           # Reusable React components
+│   ├── common/          # Shared components
+│   ├── gallery/         # Gallery-specific components
+│   ├── home/           # Homepage components
+│   ├── layout/         # Layout components (Header, Footer)
+│   ├── pricing/        # Pricing components
+│   └── services/       # Services components
+├── pages/              # Main page components
+│   ├── About.js        # About page
+│   ├── Booking.js      # Booking page (placeholder)
+│   ├── Contact.js      # Contact page
+│   ├── Gallery.js      # Gallery page
+│   ├── Home.js         # Homepage
+│   ├── Pricing.js      # Pricing page
+│   └── Services.js     # Services page
+├── styles/             # CSS stylesheets
+│   ├── components/     # Component-specific styles
+│   ├── global.css      # Global styles
+│   └── variables.css   # CSS custom properties
+├── assets/             # Static assets
+│   ├── images/         # Images and photos
+│   ├── gallery/        # Gallery images
+│   ├── logo/          # Logo files
+│   └── services/      # Service images
+└── utils/              # Utility functions
