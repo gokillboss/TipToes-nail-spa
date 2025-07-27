@@ -116,32 +116,4 @@ yarn start
 The application will be available at http://localhost:3000
 4. Build for Production
 bashnpm run build
-# or
-yarn build
-📁 Project Structure
-src/
-├── components/           # Reusable React components
-│   ├── common/          # Shared components
-│   ├── gallery/         # Gallery-specific components
-│   ├── home/           # Homepage components
-│   ├── layout/         # Layout components (Header, Footer)
-│   ├── pricing/        # Pricing components
-│   └── services/       # Services components
-├── pages/              # Main page components
-│   ├── About.js        # About page
-│   ├── Booking.js      # Booking page (placeholder)
-│   ├── Contact.js      # Contact page
-│   ├── Gallery.js      # Gallery page
-│   ├── Home.js         # Homepage
-│   ├── Pricing.js      # Pricing page
-│   └── Services.js     # Services page
-├── styles/             # CSS stylesheets
-│   ├── components/     # Component-specific styles
-│   ├── global.css      # Global styles
-│   └── variables.css   # CSS custom properties
-├── assets/             # Static assets
-│   ├── images/         # Images and photos
-│   ├── gallery/        # Gallery images
-│   ├── logo/          # Logo files
-│   └── services/      # Service images
-└── utils/              # Utility functions
+
